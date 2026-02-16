@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Це шоб блять красіво -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <script src="objects/TableManager.js"></script>
+    <script src="objects/UIManager.js"></script>
+    <script src="objects/Network.js"></script>
+    <script type="module" src="index.js"></script>
+</head>
+<body>
+    <hr class="border border-primary border-3 opacity-75">
+
+    <div id="root" style="padding-left: 5px;">
+
+        <div style="display: flex; gap: 6px;">
+            <h4>Сортувати за типом</h4>
+            <select class="form-select" style="width: auto;" id="sort-type">
+                <option value="none" selected>Усе</option>
+            </select>
+            <h4>у категорії</h4>
+            <select class="form-select" style="width: auto;" id="sort-category">
+                <option value="none" selected>Усе</option>
+            </select>
+        </div>
+
+        <table class="table" id="table">
+            <thead>
+                <tr>
+                    <th scope="col">Тип</th>
+                    <th scope="col">Категорія</th>
+                    <th scope="col">Сума</th>
+                    <th scope="col">Дата</th>
+                </tr>
+            </thead> 
+        </table>
+
+        <hr class="border border-primary border-3 opacity-75">
+
+        <div>
+            <h5>Статистика:</h5>
+            <div style="margin-left: 15px;">
+                <div style="display: flex; gap: 6px;">
+                    <h5>Доходів: </h5><h5 id="stat-income">666</h5>
+                </div>
+                <div style="display: flex; gap: 6px;">
+                    <h5>Витрат: </h5><h5 id="stat-outcome">666</h5>
+                </div>
+            </div> 
+        </div>
+
+        <hr class="border border-primary border-3 opacity-75">
+
+        <div>
+            <h5>Додати транзакцію:</h5>
+            <div style="margin-left: 15px;">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Категорія:</label>
+                        <select class="form-select" style="width: auto;" id="form-category">
+                            <option value="none" selected>Усе</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="form-amount" class="form-label">Сума</label>
+                        <input type="number" class="form-control" id="form-amount" style="width: auto;" value="0">
+                    </div>
+                    <div class="mb-3">
+                        <label for="form-amount" class="form-label">Дата</label>
+                        <input type="date" class="form-control" id="form-date" style="width: auto;">
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="form-submit">Додати</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <hr class="border border-primary border-3 opacity-75">
+
+</body>
+</html>

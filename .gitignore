@@ -1,0 +1,15 @@
+# Зависимости
+node_modules/
+
+# Данные приложения (создаются при работе)
+server/objects/db/transactions.json
+
+# Документы (не исходный код)
+*.docx
+
+# Системные и IDE
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.local
